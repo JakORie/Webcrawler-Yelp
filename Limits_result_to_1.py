@@ -14,5 +14,4 @@ soup = BeautifulSoup(r.content, "html.parser")
 
 # find() is equivalent to find_all(limit=1)
 links = soup.find("a", {"class": "biz-name"})
-for link in links:
-    print(link.string)
+print(links.string)
