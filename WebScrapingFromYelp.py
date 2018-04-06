@@ -17,5 +17,9 @@ soup = BeautifulSoup(r.content, "html.parser")
 #     print(link.string)
 
 # find() is equivalent to find_all(limit=1)
-links = soup.find("a", {"class": "biz-name"})
-print(links.string)
+# links = soup.find("a", {"class": "biz-name"})
+# print(links.string)
+
+#Gibt die Bewertung aus z.B.€€
+links = soup.find("span", {"class": "business-attribute price-range"})
+print(links.string.string)
