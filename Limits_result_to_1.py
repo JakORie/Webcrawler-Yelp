@@ -8,6 +8,11 @@ soup = BeautifulSoup(r.content, "html.parser")
 
 # print all title of the business presented in search page.
 # Limits the result of find_all to 1
-links = soup.find_all("a", {"class": "biz-name"}, limit=1)
+# links = soup.find_all("a", {"class": "biz-name"}, limit=1)
+# for link in links:
+#     print(link.string)
+
+# find() is equivalent to find_all(limit=1)
+links = soup.find("a", {"class": "biz-name"})
 for link in links:
     print(link.string)
