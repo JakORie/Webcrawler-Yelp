@@ -1,7 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.yelp.com/search?find_desc=burger&find_loc=M%C3%BCnchen%2C+Bayern&ns=1"
+#Inputparameter -> Insert Searchtext in console
+searchText = input('Suchtext eingeben:')
+
+#Manipulate URL with inputparameter
+url = "https://www.yelp.com/search?find_desc="+searchText+"&find_loc=M%C3%BCnchen%2C+Bayern&ns=1"
 r = requests.get(url)
 
 soup = BeautifulSoup(r.content, "html.parser")
