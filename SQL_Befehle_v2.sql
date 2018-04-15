@@ -25,7 +25,7 @@ User_id BIGINT(20),
 rating VARCHAR(10),
 review VARCHAR(1000), 
 PRIMARY KEY (Review_id),
-FOREIGN KEY (Restaurant_id) REFERENCES YELP_RESTAURANT(Restaurant_id)
+FOREIGN KEY (Restaurant_id) REFERENCES YELP_RESTAURANT(Restaurant_id),
 FOREIGN KEY (User_id) REFERENCES YELP_USER(User_id));
 
 CREATE TABLE YELP_PIC 
