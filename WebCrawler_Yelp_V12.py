@@ -95,6 +95,7 @@ def get_single_item(item_url):
         store_address(name.text.strip(), street.text.strip(), postalCode.text.strip(), city.text.strip(), stars.strip(),
                   segment.text.strip(), reviews.text.strip())
     except:
+        #will pass exception if error is throw because of SQL-Duplicate
         pass
     #Link zu den einzelnen Bewertungen -> neue Methode
     loop_bewertungen(soup)
